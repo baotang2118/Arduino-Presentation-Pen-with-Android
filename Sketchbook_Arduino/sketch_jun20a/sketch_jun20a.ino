@@ -39,14 +39,6 @@ void loop()
     int x = object["x"];
     int y = object["y"];
     int z = object["z"];
-    /*Serial.print("x= ");
-    Serial.print((int)x);
-    Serial.print(" ");
-    Serial.print("y= ");
-    Serial.print((int)y);
-    Serial.print(" ");
-    Serial.print("z= ");
-    Serial.println((int)z);*/
     
     if (dev == 0) {
       if (stt == 1)

@@ -6,3 +6,4 @@ Take a look at my post, Thank you.
 
 https://baotden.wordpress.com/2019/01/23/turn-your-phone-into-presentation-pen-with-arduino/
 
+Just download and open project by android studio, build it and load it into your phone. Do the same for arduino code.

@@ -1,2 +1,33 @@
 # Auto detect text files and perform LF normalization
+
 * text=auto
+
+Sketchbook_Arduino/Arduino/libraries/ArduinoJson-master/* linguist-vendored
+Sketchbook_Arduino/Arduino/libraries/ArduinoJson-master/fuzzing/* linguist-vendored
+Sketchbook_Arduino/Arduino/libraries/ArduinoJson-master/fuzzing/seed_corpus/* linguist-vendored
+
+Sketchbook_Arduino/Arduino/libraries/ArduinoJson-master/scripts/* linguist-vendored
+Sketchbook_Arduino/Arduino/libraries/ArduinoJson-master/scripts/oss-fuzz/* linguist-vendored
+Sketchbook_Arduino/Arduino/libraries/ArduinoJson-master/scripts/travis/* linguist-vendored
+
+Sketchbook_Arduino/Arduino/libraries/ArduinoJson-master/src/* linguist-vendored
+Sketchbook_Arduino/Arduino/libraries/ArduinoJson-master/src/ArduinoJson/* linguist-vendored
+Sketchbook_Arduino/Arduino/libraries/ArduinoJson-master/src/ArduinoJson/Data/* linguist-vendored
+Sketchbook_Arduino/Arduino/libraries/ArduinoJson-master/src/ArduinoJson/Deserialization/* linguist-vendored
+Sketchbook_Arduino/Arduino/libraries/ArduinoJson-master/src/ArduinoJson/Polyfills/* linguist-vendored
+Sketchbook_Arduino/Arduino/libraries/ArduinoJson-master/src/ArduinoJson/Serialization/* linguist-vendored
+Sketchbook_Arduino/Arduino/libraries/ArduinoJson-master/src/ArduinoJson/StringTraits/* linguist-vendored
+Sketchbook_Arduino/Arduino/libraries/ArduinoJson-master/src/ArduinoJson/TypeTraits/* linguist-vendored
+
+Sketchbook_Arduino/Arduino/libraries/ArduinoJson-master/test/* linguist-vendored
+Sketchbook_Arduino/Arduino/libraries/ArduinoJson-master/test/DynamicJsonBuffer/* linguist-vendored
+Sketchbook_Arduino/Arduino/libraries/ArduinoJson-master/test/IntegrationTests/* linguist-vendored
+Sketchbook_Arduino/Arduino/libraries/ArduinoJson-master/test/JsonArray/* linguist-vendored
+Sketchbook_Arduino/Arduino/libraries/ArduinoJson-master/test/JsonBuffer/* linguist-vendored
+Sketchbook_Arduino/Arduino/libraries/ArduinoJson-master/test/JsonObject/* linguist-vendored
+Sketchbook_Arduino/Arduino/libraries/ArduinoJson-master/test/JsonVariant/* linguist-vendored
+Sketchbook_Arduino/Arduino/libraries/ArduinoJson-master/test/JsonWriter/* linguist-vendored
+Sketchbook_Arduino/Arduino/libraries/ArduinoJson-master/test/Misc/* linguist-vendored
+Sketchbook_Arduino/Arduino/libraries/ArduinoJson-master/test/Polyfills/* linguist-vendored
+Sketchbook_Arduino/Arduino/libraries/ArduinoJson-master/test/StaticJsonBuffer/* linguist-vendored
+

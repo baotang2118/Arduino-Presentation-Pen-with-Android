@@ -1,18 +1,24 @@
-//This sketch is used arduino pro micro, which support Atmega32u4
-//You might have to modified source code to compatible with your one
+// This sketch runs on arduino pro micro, which supports Atmega32u4
+// You might have to modify the source code to be compatible with your board
 
 /*
-        if dev equals to 0, it will be a keyboard
-        if dev equals to 1, it will be a mouse
-        if status equals to 1, keyboard or mouse is pressed
-        if status equals to 0, keyboard or mouse is released
-        if status equals to 2, keyboard sends keystroke or mouse clicks
-        if status equals to 3, mouse is draged
-        if dev is a mouse, code = 1 is mouse left button
-                              code = 2 is mouse right button
-                              code = 3 is mouse midle button
-        if dev is a keyboard, code is keystroke number
-        x, y, z are mouse position
+  Commands arrive on Serial1 as newline-terminated CSV, in one of two shapes:
+
+    dev,status,code    keyboard keys and mouse buttons
+    dev,status,x,y,z   mouse movement and scrolling
+
+  dev = 0, the device acts as a keyboard
+    status = 0, release key code
+    status = 1, press and hold key code
+    status = 2, type key code
+  dev = 1, the device acts as a mouse
+    status = 0, release button
+    status = 1, press and hold button
+    status = 2, click button
+      code = 1, left button
+      code = 2, right button
+      code = 3, middle button
+    status = 3, move by x and y, scroll by z
 */
 
 #include <Keyboard.h>
@@ -30,8 +36,6 @@ void setup()
 void get3value(String csv) {
   int val1 = csv.indexOf(',');
   int val2 = csv.indexOf(',', val1 + 1);
-  int val3 = csv.indexOf(',', val2 + 1);
-  int val4 = csv.indexOf(',', val3 + 1);
 
   String dev = csv.substring(0, val1);
   String stt = csv.substring(val1 + 1, val2);
@@ -73,7 +77,7 @@ void get3value(String csv) {
     }
   }
 };
-void get4value(String csv) {
+void get5value(String csv) {
   int val1 = csv.indexOf(',');
   int val2 = csv.indexOf(',', val1 + 1);
   int val3 = csv.indexOf(',', val2 + 1);
@@ -107,6 +111,6 @@ void loop()
     if (comma == 2)
       get3value(csv);
     if (comma == 4)
-      get4value(csv);
+      get5value(csv);
   }
 }

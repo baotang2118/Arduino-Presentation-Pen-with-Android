@@ -2,7 +2,9 @@
 
 Presentation pens sold online are expensive. This project turns a phone into one using an Arduino. The receiver appears to the host PC as a normal USB keyboard and mouse, so no Wi-Fi and no software installation on the PC are needed.
 
-Project write-up: https://baotden.wordpress.com/2019/01/23/turn-your-phone-into-presentation-pen-with-arduino/
+Project write-up:
+- https://baotdvi.wordpress.com/2019/01/23/turn-your-phone-into-presentation-pen-with-arduino/
+- https://baotdvi.wordpress.com/2019/01/30/turn-your-phone-into-presentation-pen-with-arduino-v2/
 
 ## How it works
 

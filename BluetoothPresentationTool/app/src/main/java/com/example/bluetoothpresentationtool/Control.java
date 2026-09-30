@@ -31,236 +31,218 @@ public class Control extends AppCompatActivity {
 
     //define keyboard buttons
 
-    Button btPrtScr, btPageUp, btHome, btEsc, btKeyUp, btRshift, btRCtrl,
-            btLWin, btPageDown, btEnd, btKeyLeft, btKeyDown, btKeyRight, btRAlt,
+    Button  btPageUp, btHome, btEsc, btRshift, btRCtrl,
+            btLWin, btPageDown, btEnd, btRAlt,
             btF1, btF2, btF3, btF4, btF5, btF6, btF7, btF8, btF9, btF10, btF11, btF12, btInsert, btTab,
-            btGraveAccent, btHyphen, btEquals, btLSquareBracket, btRSquareBracket, btBackslash, btSemicolon, btApostrophe, btSlash, btDelete,
+            btGraveAccent, btHyphen, btEquals, btLSquareBracket, btRSquareBracket, btBackslash, btSemicolon, btApostrophe, btSlash,
             bt1, bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9, bt0,
             btQ, btW, btE, btR, btT, btY, btU, btI, btO, btP,
             btA, btS, btD, btF, btG, btH, btJ, btK, btL,
             btClock, btZ, btX, btC, btV, btB, btN, btM, btBSpace,
-            btLShift, btComma, btSpace, btDot, btEnter, btLCtrl, btLAlt, btRWin;
+            btLShift, btComma, btSpace, btDot, btEnter;
 
     private View.OnClickListener mListener = new View.OnClickListener() {
         public void onClick(View v) {
             final int id = v.getId();
             switch (id) {
                 case R.id.btLWindows:
-                    ioDataStream.write(jsonformat('0', '1', keymodifiers.KEY_LEFT_GUI).getBytes());
-                    ioDataStream.write(jsonformat('0', '0', keymodifiers.KEY_LEFT_GUI).getBytes());
-                    break;
-                case R.id.btLPrtScr:
-                    ioDataStream.write(jsonformat('0', '2', keymodifiers.KEY_PRTSCR).getBytes());
+                    ioDataStream.write(csv('0', '1', keymodifiers.KEY_LEFT_GUI).getBytes());
+                    ioDataStream.write(csv('0', '0', keymodifiers.KEY_LEFT_GUI).getBytes());
                     break;
                 case R.id.btPageUp:
-                    ioDataStream.write(jsonformat('0', '2', keymodifiers.KEY_PAGE_UP).getBytes());
+                    ioDataStream.write(csv('0', '2', keymodifiers.KEY_PAGE_UP).getBytes());
                     break;
                 case R.id.btHome:
-                    ioDataStream.write(jsonformat('0', '2', keymodifiers.KEY_HOME).getBytes());
+                    ioDataStream.write(csv('0', '2', keymodifiers.KEY_HOME).getBytes());
                     break;
                 case R.id.btEsc:
-                    ioDataStream.write(jsonformat('0', '2', keymodifiers.KEY_ESC).getBytes());
-                    break;
-                case R.id.btKeyUp:
-                    ioDataStream.write(jsonformat('0', '2', keymodifiers.KEY_PAGE_UP).getBytes());
+                    ioDataStream.write(csv('0', '2', keymodifiers.KEY_ESC).getBytes());
                     break;
                 case R.id.btPageDown:
-                    ioDataStream.write(jsonformat('0', '2', keymodifiers.KEY_PAGE_DOWN).getBytes());
+                    ioDataStream.write(csv('0', '2', keymodifiers.KEY_PAGE_DOWN).getBytes());
                     break;
                 case R.id.btEnd:
-                    ioDataStream.write(jsonformat('0', '2', keymodifiers.KEY_END).getBytes());
-                    break;
-                case R.id.btKeyLeft:
-                    ioDataStream.write(jsonformat('0', '2', keymodifiers.KEY_LEFT_ARROW).getBytes());
-                    break;
-                case R.id.btKeyDown:
-                    ioDataStream.write(jsonformat('0', '2', keymodifiers.KEY_DOWN_ARROW).getBytes());
-                    break;
-                case R.id.btKeyRight:
-                    ioDataStream.write(jsonformat('0', '2', keymodifiers.KEY_RIGHT_ARROW).getBytes());
+                    ioDataStream.write(csv('0', '2', keymodifiers.KEY_END).getBytes());
                     break;
                 case R.id.btF8:
-                    ioDataStream.write(jsonformat('0', '2', keymodifiers.KEY_F8).getBytes());
+                    ioDataStream.write(csv('0', '2', keymodifiers.KEY_F8).getBytes());
                     break;
                 case R.id.btF9:
-                    ioDataStream.write(jsonformat('0', '2', keymodifiers.KEY_F9).getBytes());
+                    ioDataStream.write(csv('0', '2', keymodifiers.KEY_F9).getBytes());
                     break;
                 case R.id.btF10:
-                    ioDataStream.write(jsonformat('0', '2', keymodifiers.KEY_F10).getBytes());
+                    ioDataStream.write(csv('0', '2', keymodifiers.KEY_F10).getBytes());
                     break;
                 case R.id.btF11:
-                    ioDataStream.write(jsonformat('0', '2', keymodifiers.KEY_F11).getBytes());
+                    ioDataStream.write(csv('0', '2', keymodifiers.KEY_F11).getBytes());
                     break;
                 case R.id.btF12:
-                    ioDataStream.write(jsonformat('0', '2', keymodifiers.KEY_F12).getBytes());
+                    ioDataStream.write(csv('0', '2', keymodifiers.KEY_F12).getBytes());
                     break;
                 case R.id.btInsert:
-                    ioDataStream.write(jsonformat('0', '2', keymodifiers.KEY_INSERT).getBytes());
+                    ioDataStream.write(csv('0', '2', keymodifiers.KEY_INSERT).getBytes());
                     break;
                 case R.id.btTab:
-                    ioDataStream.write(jsonformat('0', '2', keymodifiers.KEY_TAB).getBytes());
+                    ioDataStream.write(csv('0', '2', keymodifiers.KEY_TAB).getBytes());
                     break;
                 case R.id.btF1:
-                    ioDataStream.write(jsonformat('0', '2', keymodifiers.KEY_F1).getBytes());
+                    ioDataStream.write(csv('0', '2', keymodifiers.KEY_F1).getBytes());
                     break;
                 case R.id.btF2:
-                    ioDataStream.write(jsonformat('0', '2', keymodifiers.KEY_F2).getBytes());
+                    ioDataStream.write(csv('0', '2', keymodifiers.KEY_F2).getBytes());
                     break;
                 case R.id.btF3:
-                    ioDataStream.write(jsonformat('0', '2', keymodifiers.KEY_F3).getBytes());
+                    ioDataStream.write(csv('0', '2', keymodifiers.KEY_F3).getBytes());
                     break;
                 case R.id.btF4:
-                    ioDataStream.write(jsonformat('0', '2', keymodifiers.KEY_F4).getBytes());
+                    ioDataStream.write(csv('0', '2', keymodifiers.KEY_F4).getBytes());
                     break;
                 case R.id.btF5:
-                    ioDataStream.write(jsonformat('0', '2', keymodifiers.KEY_F5).getBytes());
+                    ioDataStream.write(csv('0', '2', keymodifiers.KEY_F5).getBytes());
                     break;
                 case R.id.btF6:
-                    ioDataStream.write(jsonformat('0', '2', keymodifiers.KEY_F6).getBytes());
+                    ioDataStream.write(csv('0', '2', keymodifiers.KEY_F6).getBytes());
                     break;
                 case R.id.btF7:
-                    ioDataStream.write(jsonformat('0', '2', keymodifiers.KEY_F7).getBytes());
+                    ioDataStream.write(csv('0', '2', keymodifiers.KEY_F7).getBytes());
                     break;
                 case R.id.btGraveAccent:
-                    ioDataStream.write(jsonformat('0', '2', '`').getBytes());
+                    ioDataStream.write(csv('0', '2', '`').getBytes());
                     break;
                 case R.id.btHyphen:
-                    ioDataStream.write(jsonformat('0', '2', '-').getBytes());
+                    ioDataStream.write(csv('0', '2', '-').getBytes());
                     break;
                 case R.id.btEquals:
-                    ioDataStream.write(jsonformat('0', '2', '=').getBytes());
+                    ioDataStream.write(csv('0', '2', '=').getBytes());
                     break;
                 case R.id.btLSquareBracket:
-                    ioDataStream.write(jsonformat('0', '2', '[').getBytes());
+                    ioDataStream.write(csv('0', '2', '[').getBytes());
                     break;
                 case R.id.btRSquareBracket:
-                    ioDataStream.write(jsonformat('0', '2', ']').getBytes());
+                    ioDataStream.write(csv('0', '2', ']').getBytes());
                     break;
                 case R.id.btBackslash:
-                    ioDataStream.write(jsonformat('0', '2', '\\').getBytes());
+                    ioDataStream.write(csv('0', '2', '\\').getBytes());
                     break;
                 case R.id.btSemicolon:
-                    ioDataStream.write(jsonformat('0', '2', ';').getBytes());
+                    ioDataStream.write(csv('0', '2', ';').getBytes());
                     break;
                 case R.id.btApostrophe:
-                    ioDataStream.write(jsonformat('0', '2', '\'').getBytes());
+                    ioDataStream.write(csv('0', '2', '\'').getBytes());
                     break;
                 case R.id.btSlash:
-                    ioDataStream.write(jsonformat('0', '2', '/').getBytes());
-                    break;
-                case R.id.btDelete:
-                    ioDataStream.write(jsonformat('0', '2', keymodifiers.KEY_DELETE).getBytes());
+                    ioDataStream.write(csv('0', '2', '/').getBytes());
                     break;
                 case R.id.bt1:
-                    ioDataStream.write(jsonformat('0', '2', '1').getBytes());
+                    ioDataStream.write(csv('0', '2', '1').getBytes());
                     break;
                 case R.id.bt2:
-                    ioDataStream.write(jsonformat('0', '2', '2').getBytes());
+                    ioDataStream.write(csv('0', '2', '2').getBytes());
                     break;
                 case R.id.bt3:
-                    ioDataStream.write(jsonformat('0', '2', '3').getBytes());
+                    ioDataStream.write(csv('0', '2', '3').getBytes());
                     break;
                 case R.id.bt4:
-                    ioDataStream.write(jsonformat('0', '2', '4').getBytes());
+                    ioDataStream.write(csv('0', '2', '4').getBytes());
                     break;
                 case R.id.bt5:
-                    ioDataStream.write(jsonformat('0', '2', '5').getBytes());
+                    ioDataStream.write(csv('0', '2', '5').getBytes());
                     break;
                 case R.id.bt6:
-                    ioDataStream.write(jsonformat('0', '2', '6').getBytes());
+                    ioDataStream.write(csv('0', '2', '6').getBytes());
                     break;
                 case R.id.bt7:
-                    ioDataStream.write(jsonformat('0', '2', '7').getBytes());
+                    ioDataStream.write(csv('0', '2', '7').getBytes());
                     break;
                 case R.id.bt8:
-                    ioDataStream.write(jsonformat('0', '2', '8').getBytes());
+                    ioDataStream.write(csv('0', '2', '8').getBytes());
                     break;
                 case R.id.bt9:
-                    ioDataStream.write(jsonformat('0', '2', '9').getBytes());
+                    ioDataStream.write(csv('0', '2', '9').getBytes());
                     break;
                 case R.id.bt0:
-                    ioDataStream.write(jsonformat('0', '2', '0').getBytes());
+                    ioDataStream.write(csv('0', '2', '0').getBytes());
                     break;
                 case R.id.btQ:
-                    ioDataStream.write(jsonformat('0', '2', 'q').getBytes());
+                    ioDataStream.write(csv('0', '2', 'q').getBytes());
                     break;
                 case R.id.btW:
-                    ioDataStream.write(jsonformat('0', '2', 'w').getBytes());
+                    ioDataStream.write(csv('0', '2', 'w').getBytes());
                     break;
                 case R.id.btE:
-                    ioDataStream.write(jsonformat('0', '2', 'e').getBytes());
+                    ioDataStream.write(csv('0', '2', 'e').getBytes());
                     break;
                 case R.id.btR:
-                    ioDataStream.write(jsonformat('0', '2', 'r').getBytes());
+                    ioDataStream.write(csv('0', '2', 'r').getBytes());
                     break;
                 case R.id.btT:
-                    ioDataStream.write(jsonformat('0', '2', 't').getBytes());
+                    ioDataStream.write(csv('0', '2', 't').getBytes());
                     break;
                 case R.id.btY:
-                    ioDataStream.write(jsonformat('0', '2', 'y').getBytes());
+                    ioDataStream.write(csv('0', '2', 'y').getBytes());
                     break;
                 case R.id.btU:
-                    ioDataStream.write(jsonformat('0', '2', 'u').getBytes());
+                    ioDataStream.write(csv('0', '2', 'u').getBytes());
                     break;
                 case R.id.btI:
-                    ioDataStream.write(jsonformat('0', '2', 'i').getBytes());
+                    ioDataStream.write(csv('0', '2', 'i').getBytes());
                     break;
                 case R.id.btO:
-                    ioDataStream.write(jsonformat('0', '2', 'o').getBytes());
+                    ioDataStream.write(csv('0', '2', 'o').getBytes());
                     break;
                 case R.id.btP:
-                    ioDataStream.write(jsonformat('0', '2', 'p').getBytes());
+                    ioDataStream.write(csv('0', '2', 'p').getBytes());
                     break;
                 case R.id.btA:
-                    ioDataStream.write(jsonformat('0', '2', 'a').getBytes());
+                    ioDataStream.write(csv('0', '2', 'a').getBytes());
                     break;
                 case R.id.btS:
-                    ioDataStream.write(jsonformat('0', '2', 's').getBytes());
+                    ioDataStream.write(csv('0', '2', 's').getBytes());
                     break;
                 case R.id.btD:
-                    ioDataStream.write(jsonformat('0', '2', 'd').getBytes());
+                    ioDataStream.write(csv('0', '2', 'd').getBytes());
                     break;
                 case R.id.btF:
-                    ioDataStream.write(jsonformat('0', '2', 'f').getBytes());
+                    ioDataStream.write(csv('0', '2', 'f').getBytes());
                     break;
                 case R.id.btG:
-                    ioDataStream.write(jsonformat('0', '2', 'g').getBytes());
+                    ioDataStream.write(csv('0', '2', 'g').getBytes());
                     break;
                 case R.id.btH:
-                    ioDataStream.write(jsonformat('0', '2', 'h').getBytes());
+                    ioDataStream.write(csv('0', '2', 'h').getBytes());
                     break;
                 case R.id.btJ:
-                    ioDataStream.write(jsonformat('0', '2', 'j').getBytes());
+                    ioDataStream.write(csv('0', '2', 'j').getBytes());
                     break;
                 case R.id.btK:
-                    ioDataStream.write(jsonformat('0', '2', 'k').getBytes());
+                    ioDataStream.write(csv('0', '2', 'k').getBytes());
                     break;
                 case R.id.btL:
-                    ioDataStream.write(jsonformat('0', '2', 'l').getBytes());
+                    ioDataStream.write(csv('0', '2', 'l').getBytes());
                     break;
                 case R.id.btZ:
-                    ioDataStream.write(jsonformat('0', '2', 'z').getBytes());
+                    ioDataStream.write(csv('0', '2', 'z').getBytes());
                     break;
                 case R.id.btX:
-                    ioDataStream.write(jsonformat('0', '2', 'x').getBytes());
+                    ioDataStream.write(csv('0', '2', 'x').getBytes());
                     break;
                 case R.id.btC:
-                    ioDataStream.write(jsonformat('0', '2', 'c').getBytes());
+                    ioDataStream.write(csv('0', '2', 'c').getBytes());
                     break;
                 case R.id.btV:
-                    ioDataStream.write(jsonformat('0', '2', 'v').getBytes());
+                    ioDataStream.write(csv('0', '2', 'v').getBytes());
                     break;
                 case R.id.btB:
-                    ioDataStream.write(jsonformat('0', '2', 'b').getBytes());
+                    ioDataStream.write(csv('0', '2', 'b').getBytes());
                     break;
                 case R.id.btN:
-                    ioDataStream.write(jsonformat('0', '2', 'n').getBytes());
+                    ioDataStream.write(csv('0', '2', 'n').getBytes());
                     break;
                 case R.id.btM:
-                    ioDataStream.write(jsonformat('0', '2', 'm').getBytes());
+                    ioDataStream.write(csv('0', '2', 'm').getBytes());
                     break;
                 case R.id.btCAPSLOCK:
-                    ioDataStream.write(jsonformat('0', '2', keymodifiers.KEY_CAPS_LOCK).getBytes());
+                    ioDataStream.write(csv('0', '2', keymodifiers.KEY_CAPS_LOCK).getBytes());
                     if (!capslockisOn) {
                         btClock.setBackgroundColor(0xff00ff00);
                         capslockisOn = !capslockisOn;
@@ -270,19 +252,19 @@ public class Control extends AppCompatActivity {
                     }
                     break;
                 case R.id.btBACKSPACE:
-                    ioDataStream.write(jsonformat('0', '2', keymodifiers.KEY_BACKSPACE).getBytes());
+                    ioDataStream.write(csv('0', '2', keymodifiers.KEY_BACKSPACE).getBytes());
                     break;
                 case R.id.btCOMMA:
-                    ioDataStream.write(jsonformat('0', '2', ',').getBytes());
+                    ioDataStream.write(csv('0', '2', ',').getBytes());
                     break;
                 case R.id.btSPACE:
-                    ioDataStream.write(jsonformat('0', '2', ' ').getBytes());
+                    ioDataStream.write(csv('0', '2', ' ').getBytes());
                     break;
                 case R.id.btdot:
-                    ioDataStream.write(jsonformat('0', '2', '.').getBytes());
+                    ioDataStream.write(csv('0', '2', '.').getBytes());
                     break;
                 case R.id.btENTER:
-                    ioDataStream.write(jsonformat('0', '2', keymodifiers.KEY_RETURN).getBytes());
+                    ioDataStream.write(csv('0', '2', keymodifiers.KEY_RETURN).getBytes());
                     break;
             }
         }
@@ -350,19 +332,14 @@ public class Control extends AppCompatActivity {
         smallscrollpad.setBackgroundResource(android.R.drawable.dialog_holo_dark_frame);
 
         //Define keyboard buttons
-        btPrtScr = findViewById(R.id.btLPrtScr);
         btPageUp = findViewById(R.id.btPageUp);
         btHome = findViewById(R.id.btHome);
         btEsc = findViewById(R.id.btEsc);
-        btKeyUp = findViewById(R.id.btKeyUp);
         btRshift = findViewById(R.id.btRshift);
         btRCtrl = findViewById(R.id.btRCtrl);
         btLWin = findViewById(R.id.btLWindows);
         btPageDown = findViewById(R.id.btPageDown);
         btEnd = findViewById(R.id.btEnd);
-        btKeyLeft = findViewById(R.id.btKeyLeft);
-        btKeyDown = findViewById(R.id.btKeyDown);
-        btKeyRight = findViewById(R.id.btKeyRight);
         btRAlt = findViewById(R.id.btRAlt);
 
         btF1 = findViewById(R.id.btF1);
@@ -389,7 +366,6 @@ public class Control extends AppCompatActivity {
         btSemicolon = findViewById(R.id.btSemicolon);
         btApostrophe = findViewById(R.id.btApostrophe);
         btSlash = findViewById(R.id.btSlash);
-        btDelete = findViewById(R.id.btDelete);
 
         bt1 = findViewById(R.id.bt1);
         bt2 = findViewById(R.id.bt2);
@@ -439,27 +415,15 @@ public class Control extends AppCompatActivity {
         btDot = findViewById(R.id.btdot);
         btEnter = findViewById(R.id.btENTER);
 
-        btLCtrl = findViewById(R.id.btLCtrl);
-        btLAlt = findViewById(R.id.btLAlt);
-        btRWin = findViewById(R.id.btRWindows);
-
-        btLCtrl.setBackgroundResource(android.R.drawable.btn_default);
         btPageUp.setBackgroundResource(android.R.drawable.btn_default);
         btHome.setBackgroundResource(android.R.drawable.btn_default);
         btEsc.setBackgroundResource(android.R.drawable.btn_default);
-        btKeyUp.setBackgroundResource(android.R.drawable.btn_default);
         btRshift.setBackgroundResource(android.R.drawable.btn_default);
         btRCtrl.setBackgroundResource(android.R.drawable.btn_default);
-        btLAlt.setBackgroundResource(android.R.drawable.btn_default);
         btPageDown.setBackgroundResource(android.R.drawable.btn_default);
         btEnd.setBackgroundResource(android.R.drawable.btn_default);
-        btKeyLeft.setBackgroundResource(android.R.drawable.btn_default);
-        btKeyDown.setBackgroundResource(android.R.drawable.btn_default);
-        btKeyRight.setBackgroundResource(android.R.drawable.btn_default);
         btRAlt.setBackgroundResource(android.R.drawable.btn_default);
-        btRWin.setBackgroundResource(android.R.drawable.btn_default);
         btLWin.setBackgroundResource(android.R.drawable.btn_default);
-        btPrtScr.setBackgroundResource(android.R.drawable.btn_default);
 
         btF1.setBackgroundResource(android.R.drawable.btn_default);
         btF2.setBackgroundResource(android.R.drawable.btn_default);
@@ -485,7 +449,6 @@ public class Control extends AppCompatActivity {
         btSemicolon.setBackgroundResource(android.R.drawable.btn_default);
         btApostrophe.setBackgroundResource(android.R.drawable.btn_default);
         btSlash.setBackgroundResource(android.R.drawable.btn_default);
-        btDelete.setBackgroundResource(android.R.drawable.btn_default);
 
         bt1.setBackgroundResource(android.R.drawable.btn_default);
         bt2.setBackgroundResource(android.R.drawable.btn_default);
@@ -641,7 +604,7 @@ public class Control extends AppCompatActivity {
                         LeftmouseClick = true;
                     }
                     if (leftmouseIsPress) {
-                        ioDataStream.write(jsonformat('1', '0', keymodifiers.MOUSE_LEFT).getBytes());
+                        ioDataStream.write(csv('1', '0', keymodifiers.MOUSE_LEFT).getBytes());
                         leftmouseIsPress = false;
                     }
                     trackFinger.Gone();
@@ -651,19 +614,19 @@ public class Control extends AppCompatActivity {
                     int diffX = (int) (x - xInit);
                     int diffY = (int) (y - yInit);
                     if (diffX != 0 || diffY != 0) {
-                        ioDataStream.write(jsonformat('1', '3', diffX, diffY, 0).getBytes());
+                        ioDataStream.write(csv('1', '3', diffX, diffY, 0).getBytes());
                     }
                     trackFinger.DrawTrack(touchpad, x, y);
                 }
 
                 if (LeftmousePress && LeftmouseClick) {
-                    ioDataStream.write(jsonformat('1', '1', keymodifiers.MOUSE_LEFT).getBytes());
+                    ioDataStream.write(csv('1', '1', keymodifiers.MOUSE_LEFT).getBytes());
                     LeftmousePress = false;
                     LeftmouseClick = false;
                     leftmouseIsPress = true;
                 }
                 if (!LeftmousePress && LeftmouseClick) {
-                    ioDataStream.write(jsonformat('1', '2', keymodifiers.MOUSE_LEFT).getBytes());
+                    ioDataStream.write(csv('1', '2', keymodifiers.MOUSE_LEFT).getBytes());
                     LeftmouseClick = false;
                 }
                 Control.xInit = x;
@@ -685,7 +648,7 @@ public class Control extends AppCompatActivity {
                 if (event.getAction() == MotionEvent.ACTION_MOVE) {
                     int diffY = (int) (y - yScrollInit);
                     if (diffY != 0) {
-                        ioDataStream.write(jsonformat('1', '3', 0, 0, diffY).getBytes());
+                        ioDataStream.write(csv('1', '3', 0, 0, diffY).getBytes());
                     }
                     trackFinger.Appear();
                 }
@@ -701,16 +664,16 @@ public class Control extends AppCompatActivity {
         btstart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ioDataStream.write(jsonformat('0', '2', keymodifiers.KEY_F5).getBytes());
+                ioDataStream.write(csv('0', '2', keymodifiers.KEY_F5).getBytes());
             }
         });
 
         btstart.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                ioDataStream.write(jsonformat('0', '1', keymodifiers.KEY_LEFT_SHIFT).getBytes());
-                ioDataStream.write(jsonformat('0', '2', keymodifiers.KEY_F5).getBytes());
-                ioDataStream.write(jsonformat('0', '0', keymodifiers.KEY_LEFT_SHIFT).getBytes());
+                ioDataStream.write(csv('0', '1', keymodifiers.KEY_LEFT_SHIFT).getBytes());
+                ioDataStream.write(csv('0', '2', keymodifiers.KEY_F5).getBytes());
+                ioDataStream.write(csv('0', '0', keymodifiers.KEY_LEFT_SHIFT).getBytes());
                 return true;
             }
         });
@@ -718,71 +681,71 @@ public class Control extends AppCompatActivity {
         btexit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ioDataStream.write(jsonformat('0', '2', keymodifiers.KEY_ESC).getBytes());
+                ioDataStream.write(csv('0', '2', keymodifiers.KEY_ESC).getBytes());
             }
         });
 
         btblack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ioDataStream.write(jsonformat('0', '2', 'b').getBytes());
+                ioDataStream.write(csv('0', '2', 'b').getBytes());
             }
         });
 
         btwhite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ioDataStream.write(jsonformat('0', '2', 'w').getBytes());
+                ioDataStream.write(csv('0', '2', 'w').getBytes());
             }
         });
 
         btarrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ioDataStream.write(jsonformat('0', '1', keymodifiers.KEY_LEFT_CTRL).getBytes());
-                ioDataStream.write(jsonformat('0', '2', 'a').getBytes());
-                ioDataStream.write(jsonformat('0', '0', keymodifiers.KEY_LEFT_CTRL).getBytes());
+                ioDataStream.write(csv('0', '1', keymodifiers.KEY_LEFT_CTRL).getBytes());
+                ioDataStream.write(csv('0', '2', 'a').getBytes());
+                ioDataStream.write(csv('0', '0', keymodifiers.KEY_LEFT_CTRL).getBytes());
             }
         });
 
         btlaserp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ioDataStream.write(jsonformat('0', '1', keymodifiers.KEY_LEFT_CTRL).getBytes());
-                ioDataStream.write(jsonformat('0', '2', 'l').getBytes());
-                ioDataStream.write(jsonformat('0', '0', keymodifiers.KEY_LEFT_CTRL).getBytes());
+                ioDataStream.write(csv('0', '1', keymodifiers.KEY_LEFT_CTRL).getBytes());
+                ioDataStream.write(csv('0', '2', 'l').getBytes());
+                ioDataStream.write(csv('0', '0', keymodifiers.KEY_LEFT_CTRL).getBytes());
             }
         });
 
         btpen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ioDataStream.write(jsonformat('0', '1', keymodifiers.KEY_LEFT_CTRL).getBytes());
-                ioDataStream.write(jsonformat('0', '2', 'p').getBytes());
-                ioDataStream.write(jsonformat('0', '0', keymodifiers.KEY_LEFT_CTRL).getBytes());
+                ioDataStream.write(csv('0', '1', keymodifiers.KEY_LEFT_CTRL).getBytes());
+                ioDataStream.write(csv('0', '2', 'p').getBytes());
+                ioDataStream.write(csv('0', '0', keymodifiers.KEY_LEFT_CTRL).getBytes());
             }
         });
 
         bteraser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ioDataStream.write(jsonformat('0', '1', keymodifiers.KEY_LEFT_CTRL).getBytes());
-                ioDataStream.write(jsonformat('0', '2', 'e').getBytes());
-                ioDataStream.write(jsonformat('0', '0', keymodifiers.KEY_LEFT_CTRL).getBytes());
+                ioDataStream.write(csv('0', '1', keymodifiers.KEY_LEFT_CTRL).getBytes());
+                ioDataStream.write(csv('0', '2', 'e').getBytes());
+                ioDataStream.write(csv('0', '0', keymodifiers.KEY_LEFT_CTRL).getBytes());
             }
         });
 
         bttleft.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ioDataStream.write(jsonformat('0', '2', keymodifiers.KEY_LEFT_ARROW).getBytes());
+                ioDataStream.write(csv('0', '2', keymodifiers.KEY_LEFT_ARROW).getBytes());
             }
         });
 
         bttright.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ioDataStream.write(jsonformat('0', '2', keymodifiers.KEY_RIGHT_ARROW).getBytes());
+                ioDataStream.write(csv('0', '2', keymodifiers.KEY_RIGHT_ARROW).getBytes());
             }
         });
 
@@ -790,12 +753,8 @@ public class Control extends AppCompatActivity {
         btPageUp.setOnClickListener(mListener);
         btHome.setOnClickListener(mListener);
         btEsc.setOnClickListener(mListener);
-        btKeyUp.setOnClickListener(mListener);
         btPageDown.setOnClickListener(mListener);
         btEnd.setOnClickListener(mListener);
-        btKeyLeft.setOnClickListener(mListener);
-        btKeyDown.setOnClickListener(mListener);
-        btKeyRight.setOnClickListener(mListener);
 
         btF1.setOnClickListener(mListener);
         btF2.setOnClickListener(mListener);
@@ -821,7 +780,7 @@ public class Control extends AppCompatActivity {
         btSemicolon.setOnClickListener(mListener);
         btApostrophe.setOnClickListener(mListener);
         btSlash.setOnClickListener(mListener);
-        btDelete.setOnClickListener(mListener);
+        //btDelete.setOnClickListener(mListener);
 
         bt1.setOnClickListener(mListener);
         bt2.setOnClickListener(mListener);
@@ -872,17 +831,16 @@ public class Control extends AppCompatActivity {
         btEnter.setOnClickListener(mListener);
 
         btLWin.setOnClickListener(mListener);
-        btPrtScr.setOnClickListener(mListener);
 
         btLShift.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    ioDataStream.write(jsonformat('0', '1', keymodifiers.KEY_LEFT_SHIFT).getBytes());
+                    ioDataStream.write(csv('0', '1', keymodifiers.KEY_LEFT_SHIFT).getBytes());
                     btLShift.setBackgroundColor(0xff00ff00);
                 }
                 if (event.getAction() == MotionEvent.ACTION_UP) {
-                    ioDataStream.write(jsonformat('0', '0', keymodifiers.KEY_LEFT_SHIFT).getBytes());
+                    ioDataStream.write(csv('0', '0', keymodifiers.KEY_LEFT_SHIFT).getBytes());
                     btLShift.setBackgroundResource(android.R.drawable.btn_default);
                 }
 
@@ -894,28 +852,12 @@ public class Control extends AppCompatActivity {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    ioDataStream.write(jsonformat('0', '1', keymodifiers.KEY_RIGHT_SHIFT).getBytes());
+                    ioDataStream.write(csv('0', '1', keymodifiers.KEY_RIGHT_SHIFT).getBytes());
                     btRshift.setBackgroundColor(0xff00ff00);
                 }
                 if (event.getAction() == MotionEvent.ACTION_UP) {
-                    ioDataStream.write(jsonformat('0', '0', keymodifiers.KEY_RIGHT_SHIFT).getBytes());
+                    ioDataStream.write(csv('0', '0', keymodifiers.KEY_RIGHT_SHIFT).getBytes());
                     btRshift.setBackgroundResource(android.R.drawable.btn_default);
-                }
-
-                return true;
-            }
-        });
-
-        btLCtrl.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    ioDataStream.write(jsonformat('0', '1', keymodifiers.KEY_LEFT_CTRL).getBytes());
-                    btLCtrl.setBackgroundColor(0xff00ff00);
-                }
-                if (event.getAction() == MotionEvent.ACTION_UP) {
-                    ioDataStream.write(jsonformat('0', '0', keymodifiers.KEY_LEFT_CTRL).getBytes());
-                    btLCtrl.setBackgroundResource(android.R.drawable.btn_default);
                 }
 
                 return true;
@@ -926,28 +868,12 @@ public class Control extends AppCompatActivity {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    ioDataStream.write(jsonformat('0', '1', keymodifiers.KEY_RIGHT_CTRL).getBytes());
+                    ioDataStream.write(csv('0', '1', keymodifiers.KEY_RIGHT_CTRL).getBytes());
                     btRCtrl.setBackgroundColor(0xff00ff00);
                 }
                 if (event.getAction() == MotionEvent.ACTION_UP) {
-                    ioDataStream.write(jsonformat('0', '0', keymodifiers.KEY_RIGHT_CTRL).getBytes());
+                    ioDataStream.write(csv('0', '0', keymodifiers.KEY_RIGHT_CTRL).getBytes());
                     btRCtrl.setBackgroundResource(android.R.drawable.btn_default);
-                }
-
-                return true;
-            }
-        });
-
-        btLAlt.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    ioDataStream.write(jsonformat('0', '1', keymodifiers.KEY_LEFT_ALT).getBytes());
-                    btLAlt.setBackgroundColor(0xff00ff00);
-                }
-                if (event.getAction() == MotionEvent.ACTION_UP) {
-                    ioDataStream.write(jsonformat('0', '0', keymodifiers.KEY_LEFT_ALT).getBytes());
-                    btLAlt.setBackgroundResource(android.R.drawable.btn_default);
                 }
 
                 return true;
@@ -958,28 +884,12 @@ public class Control extends AppCompatActivity {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    ioDataStream.write(jsonformat('0', '1', keymodifiers.KEY_RIGHT_ALT).getBytes());
+                    ioDataStream.write(csv('0', '1', keymodifiers.KEY_RIGHT_ALT).getBytes());
                     btRAlt.setBackgroundColor(0xff00ff00);
                 }
                 if (event.getAction() == MotionEvent.ACTION_UP) {
-                    ioDataStream.write(jsonformat('0', '0', keymodifiers.KEY_RIGHT_ALT).getBytes());
+                    ioDataStream.write(csv('0', '0', keymodifiers.KEY_RIGHT_ALT).getBytes());
                     btRAlt.setBackgroundResource(android.R.drawable.btn_default);
-                }
-
-                return true;
-            }
-        });
-
-        btRWin.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    ioDataStream.write(jsonformat('0', '1', keymodifiers.KEY_RIGHT_GUI).getBytes());
-                    btRWin.setBackgroundColor(0xff00ff00);
-                }
-                if (event.getAction() == MotionEvent.ACTION_UP) {
-                    ioDataStream.write(jsonformat('0', '0', keymodifiers.KEY_RIGHT_GUI).getBytes());
-                    btRWin.setBackgroundResource(android.R.drawable.btn_default);
                 }
 
                 return true;
@@ -1021,7 +931,7 @@ public class Control extends AppCompatActivity {
                         int diffY = (int) (y - yScrollInit);
                         int diffX = (int) (x - xScrollInit);
                         if (diffY != 0 && Math.abs(diffX) < 3) {
-                            ioDataStream.write(jsonformat('1', '3', 0, 0, diffY).getBytes());
+                            ioDataStream.write(csv('1', '3', 0, 0, diffY).getBytes());
                         }
                     }
                     Control.xScrollInit = x;
@@ -1048,7 +958,7 @@ public class Control extends AppCompatActivity {
                             LeftmouseClick = true;
                         }
                         if (leftmouseIsPress) {
-                            ioDataStream.write(jsonformat('1', '0', keymodifiers.MOUSE_LEFT).getBytes());
+                            ioDataStream.write(csv('1', '0', keymodifiers.MOUSE_LEFT).getBytes());
                             leftmouseIsPress = false;
                         }
                         trackFinger.Gone();
@@ -1061,7 +971,7 @@ public class Control extends AppCompatActivity {
                             int diffX = (int) (x - xInit);
                             int diffY = (int) (y - yInit);
                             if (diffX != 0 || diffY != 0) {
-                                ioDataStream.write(jsonformat('1', '3', diffX, diffY, 0).getBytes());
+                                ioDataStream.write(csv('1', '3', diffX, diffY, 0).getBytes());
                             }
                         }
                         trackFinger.Appear();
@@ -1069,13 +979,13 @@ public class Control extends AppCompatActivity {
                     }
 
                     if (LeftmousePress && LeftmouseClick) {
-                        ioDataStream.write(jsonformat('1', '1', keymodifiers.MOUSE_LEFT).getBytes());
+                        ioDataStream.write(csv('1', '1', keymodifiers.MOUSE_LEFT).getBytes());
                         LeftmousePress = false;
                         LeftmouseClick = false;
                         leftmouseIsPress = true;
                     }
                     if (!LeftmousePress && LeftmouseClick) {
-                        ioDataStream.write(jsonformat('1', '2', keymodifiers.MOUSE_LEFT).getBytes());
+                        ioDataStream.write(csv('1', '2', keymodifiers.MOUSE_LEFT).getBytes());
                         LeftmouseClick = false;
                     }
                     Control.xInit = x;
@@ -1101,14 +1011,14 @@ public class Control extends AppCompatActivity {
                 if (event.getAction() == MotionEvent.ACTION_UP) {
                     long diff = event.getEventTime() - Sdowntime;
                     if (diff < 200) {
-                        ioDataStream.write(jsonformat('1', '2', keymodifiers.MOUSE_MIDDLE).getBytes());
+                        ioDataStream.write(csv('1', '2', keymodifiers.MOUSE_MIDDLE).getBytes());
                     }
                     trackFinger.Gone();
                 }
                 if (event.getAction() == MotionEvent.ACTION_MOVE) {
                     int diffY = (int) (y - yScrollInit);
                     if (diffY != 0) {
-                        ioDataStream.write(jsonformat('1', '3', 0, 0, diffY).getBytes());
+                        ioDataStream.write(csv('1', '3', 0, 0, diffY).getBytes());
                     }
                     trackFinger.Appear();
                 }
@@ -1125,9 +1035,9 @@ public class Control extends AppCompatActivity {
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN)
                     if (!leftmouseIsPress)
-                        ioDataStream.write(jsonformat('1', '1', keymodifiers.MOUSE_LEFT).getBytes());
+                        ioDataStream.write(csv('1', '1', keymodifiers.MOUSE_LEFT).getBytes());
                 if (event.getAction() == MotionEvent.ACTION_UP)
-                    ioDataStream.write(jsonformat('1', '0', keymodifiers.MOUSE_LEFT).getBytes());
+                    ioDataStream.write(csv('1', '0', keymodifiers.MOUSE_LEFT).getBytes());
                 return true;
             }
         });
@@ -1137,9 +1047,9 @@ public class Control extends AppCompatActivity {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN)
-                    ioDataStream.write(jsonformat('1', '1', keymodifiers.MOUSE_RIGHT).getBytes());
+                    ioDataStream.write(csv('1', '1', keymodifiers.MOUSE_RIGHT).getBytes());
                 if (event.getAction() == MotionEvent.ACTION_UP)
-                    ioDataStream.write(jsonformat('1', '0', keymodifiers.MOUSE_RIGHT).getBytes());
+                    ioDataStream.write(csv('1', '0', keymodifiers.MOUSE_RIGHT).getBytes());
                 return true;
             }
         });
@@ -1149,9 +1059,9 @@ public class Control extends AppCompatActivity {
         {
             @Override
             public void onClick(View v) {
-                ioDataStream.write(jsonformat('0', '1', keymodifiers.KEY_RIGHT_ALT).getBytes());
-                ioDataStream.write(jsonformat('0', '2', keymodifiers.KEY_RIGHT_ARROW).getBytes());
-                ioDataStream.write(jsonformat('0', '0', keymodifiers.KEY_RIGHT_ALT).getBytes());
+                ioDataStream.write(csv('0', '1', keymodifiers.KEY_RIGHT_ALT).getBytes());
+                ioDataStream.write(csv('0', '2', keymodifiers.KEY_RIGHT_ARROW).getBytes());
+                ioDataStream.write(csv('0', '0', keymodifiers.KEY_RIGHT_ALT).getBytes());
             }
         });
         btnext.setOnClickListener(new View.OnClickListener()
@@ -1159,36 +1069,36 @@ public class Control extends AppCompatActivity {
         {
             @Override
             public void onClick(View v) {
-                ioDataStream.write(jsonformat('0', '1', keymodifiers.KEY_RIGHT_ALT).getBytes());
-                ioDataStream.write(jsonformat('0', '2', keymodifiers.KEY_LEFT_ARROW).getBytes());
-                ioDataStream.write(jsonformat('0', '0', keymodifiers.KEY_RIGHT_ALT).getBytes());
+                ioDataStream.write(csv('0', '1', keymodifiers.KEY_RIGHT_ALT).getBytes());
+                ioDataStream.write(csv('0', '2', keymodifiers.KEY_LEFT_ARROW).getBytes());
+                ioDataStream.write(csv('0', '0', keymodifiers.KEY_RIGHT_ALT).getBytes());
 
             }
         });
     }
 
-    private String jsonformat(char device, char status, char code) {
-        //{"dev": 0, "stt": 0, "code": 113}\n
-        String Json = "";
+    private String csv(char device, char status, char code) {
+        //0,0,113\n
         if (device == '0') {
-            Json = "{\"dev\": " + device + ",\"stt\": " + status + ",\"code\": " + (int) code + "}\n";
+            return (device + "," + status + "," + (int) code + "\n");
         }
         if (device == '1') {
-            Json = "{\"dev\": " + device + ",\"stt\": " + status + ",\"code\": " + code + "}\n";
+            return (device + "," + status + "," + code + "\n");
         }
-        return Json;
+        return "";
     }
 
-    private String jsonformat(char device, char status, int x, int y, int z) {
-        String Json = "";
+    private String csv(char device, char status, int x, int y, int z) {
         if (device == '1') {
-            Json = "{\"dev\": " + device + ",\"stt\": " + status + ",\"x\": " + x + ",\"y\": " + y + ",\"z\": " + z + "}\n";
+            return (device + "," + status + "," + x + "," + y + "," + z + "\n");
         }
-        return Json;
+        return "";
     }
 
-    private String jsonformat(char device, char status, String code) {
-        String Json = "{\"dev\": " + device + ",\"stt\": " + status + ",\"code\": " + code + "}\n";
-        return Json;
+    private String csv(char device, char status, String code) {
+        if (device == '0'){
+        return(device + "," + status + "," + code + "\n");
+        }
+        return "";
     }
 }

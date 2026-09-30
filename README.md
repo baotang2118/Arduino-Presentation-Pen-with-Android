@@ -10,3 +10,9 @@ Just download and open project by android studio, build it and load it into your
 
 <img src="https://github.com/baotang2118/Arduino-Presentation-Pen-with-Android/blob/master/Photo%20result/Screenshot_20180807-073110.jpg" height="300" width="200"> <img src="https://github.com/baotang2118/Arduino-Presentation-Pen-with-Android/blob/master/Photo%20result/Screenshot_20180807-074154.jpg" height="300" width="200"> <img src="https://github.com/baotang2118/Arduino-Presentation-Pen-with-Android/blob/master/Photo%20result/Screenshot_20180807-074204.jpg" height="300" width="200"> <img src="https://github.com/baotang2118/Arduino-Presentation-Pen-with-Android/blob/master/Photo%20result/Screenshot_20180807-074225.jpg" height="300" width="200">
 <img src="https://github.com/baotang2118/Arduino-Presentation-Pen-with-Android/blob/master/Photo%20result/Wiring%20and%20Circuit.png" height="200" width="300">
+
+## Version 2
+
+The revised version is available in the [v2 repository](https://github.com/baotang2118/Arduino-Presentation-Pen-with-Android-v2). Read the [v2 project post](https://baotdvi.wordpress.com/2019/06/30/turn-your-phone-into-presentation-pen-with-arduino-v2/).
+
+<img src="https://github.com/baotang2118/Arduino-Presentation-Pen-with-Android-v2/blob/master/Photo%20result/Presentation%20Pen_v2.jpg" height="200" width="300">
